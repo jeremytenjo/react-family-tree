@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { MdPerson } from "react-icons/md";
+import React from 'react'
+import styled from 'styled-components'
+import { MdPerson } from 'react-icons/md'
 
 const StyledWrapper = styled.div`
   margin: 10px;
@@ -16,14 +16,16 @@ const StyledAvatar = styled.div`
 `
 
 const Member = (member) => {
-    const defaultAvatar = <MdPerson style={{fontSize: 50}} />;
-    const { name, avatar } = member;
-    return (
-        <StyledWrapper>
-            <StyledAvatar>{ avatar ? <img src={avatar} /> : defaultAvatar}</StyledAvatar>
-            <span>{name}</span>
-        </StyledWrapper>
-    );
+  const defaultAvatar = <MdPerson style={{ fontSize: 50 }} />
+  const { name, avatar } = member
+  return (
+    <StyledWrapper>
+      <StyledAvatar>
+        {avatar ? <img src={avatar} /> : defaultAvatar}
+      </StyledAvatar>
+      <span>{name}</span>
+    </StyledWrapper>
+  )
 }
 
-export default Member;
+export default Member
